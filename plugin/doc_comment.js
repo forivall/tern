@@ -167,6 +167,25 @@
           if (proto instanceof infer.Obj) type = infer.getInstance(proto);
         } else {
           type = found;
+          // search into subproperties (for namespaces)
+          while (str.charAt(pos) == '.') {
+            ++pos;
+            start = pos;
+            while (/[\w$]/.test(str.charAt(pos))) ++pos;
+            if (start == pos) return null;
+            word = str.slice(start, pos);
+            var found = type.hasProp(word);
+            if (found) found = found.getType();
+            if (!found) {
+              type = infer.ANull;
+              break;
+            } else if (found instanceof infer.Fn && /^[A-Z]/.test(word)) {
+              var proto = found.getProp("prototype").getType();
+              if (proto instanceof infer.Obj) type = infer.getInstance(proto);
+            } else {
+              type = found;
+            }
+          }
         }
       }
     }
