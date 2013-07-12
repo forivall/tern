@@ -2379,10 +2379,30 @@
     "!doc": "Selection is the class of the object returned by window.getSelection() and other methods. It represents the text selection in the greater page, possibly spanning multiple elements, when the user drags over static text and other parts of the page. For information about text selection in an individual text editing element."
   },
   "console": {
+    "dir": {
+      "!type": "fn(target: object)",
+      "!url": "https://developer.mozilla.org/en/docs/DOM/console.dir",
+      "!doc": "Displays an interactive list of the properties of the specified JavaScript object."
+    },
     "error": {
       "!type": "fn(text: string)",
       "!url": "https://developer.mozilla.org/en/docs/DOM/console.error",
       "!doc": "Outputs an error message to the Web Console."
+    },
+    "group": {
+      "!type": "fn()",
+      "!url": "https://developer.mozilla.org/en/docs/DOM/console.group",
+      "!doc": "Creates a new inline group in the Web Console log."
+    },
+    "groupCollapsed": {
+      "!type": "fn()",
+      "!url": "https://developer.mozilla.org/en/docs/DOM/console.groupCollapsed",
+      "!doc": "Creates a new inline group in the Web Console log. The new group is created collapsed."
+    },
+    "groupEnd": {
+      "!type": "fn()",
+      "!url": "https://developer.mozilla.org/en/docs/DOM/console.groupEnd",
+      "!doc": "Exits the current inline group in the Web Console log."
     },
     "info": {
       "!type": "fn(text: string)",
@@ -2393,6 +2413,21 @@
       "!type": "fn(text: string)",
       "!url": "https://developer.mozilla.org/en/docs/DOM/console.log",
       "!doc": "Outputs a message to the Web Console."
+    },
+    "time": {
+      "!type": "fn(timerName: string)",
+      "!url": "https://developer.mozilla.org/en/docs/DOM/console.time",
+      "!doc": "Starts a timer you can use to track how long an operation takes"
+    },
+    "timeEnd": {
+      "!type": "fn(timerName: string)",
+      "!url": "https://developer.mozilla.org/en/docs/DOM/console.timeEnd",
+      "!doc": "Stops a timer that was previously started by calling console.time()."
+    },
+    "trace": {
+      "!type": "fn()",
+      "!url": "https://developer.mozilla.org/en/docs/DOM/console.trace",
+      "!doc": "Outputs a stack trace to the Web Console."
     },
     "warn": {
       "!type": "fn(text: string)",
